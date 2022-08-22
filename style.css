@@ -3,3 +3,11 @@
 .best-player{
     color: tomato;
 }
+
+.player-section{
+    background-color: #151515;
+}
+
+.footer-section{
+    border-top: 1px solid white;
+}
