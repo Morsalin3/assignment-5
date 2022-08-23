@@ -1,8 +1,5 @@
 
 
-//   function getPlayersName(player){
-    
-//   }
 document.getElementById('btn-neymer').addEventListener('click', function(){
     const playerSelect = document.getElementById('player-list')
     const createList = document.createElement('li');
@@ -45,7 +42,7 @@ document.getElementById('btn-santos').addEventListener('click', function(){
     createList.innerText = 'Renato Sanches';
     playerSelect.appendChild(createList);
       
-    if('player-name'.length >5){
+    if(players.length >=5){
         alert('no more choise player');
         return;
     }
@@ -56,25 +53,53 @@ document.getElementById('btn-santos').addEventListener('click', function(){
 document.getElementById('btn-expense').addEventListener('click', function(){
 
     const playerList = document.getElementById('player-list');
-    const perPlayerPriceString = playerList.value ;
-    const playerListTotal = parseFloat(perPlayerPriceString);
-    // get player expense 
+    const playerChildes = playerList.childNodes;
+    const players =playerChildes.length-1;
+
+    // get per player expense 
     const playerExpense = document.getElementById('expense-field');
     const PlayerExpenseString = playerExpense.value ;
     const perPlayerExpense = parseFloat(PlayerExpenseString);
+    // playerExpense.value = '';
 
-    const  getPPlayerExpense = (perPlayerExpense * playerListTotal).toFixed(2);
-    const  playerExpenseTotal = parseFloat(getPPlayerExpense);
-    // get player total expense 
+    //  get player total expense 
+    const  getPlayerExpense = (perPlayerExpense * players).toFixed(2);
+    const  playerExpenseTotal = parseFloat(getPlayerExpense);
+    
     const playersExpense = document.getElementById('total-expense');
     playersExpense.innerText = playerExpenseTotal;
-    // const PlayerExpenseString = playersExpense.innerText;
+   
     
 });
 
 //  get final coast 
+function getStuffAmount(amount){
+   
+}
 
 document.getElementById('btn-total').addEventListener('click', function(){
+
     const managerField = document.getElementById('manager-field');
+    const managerFieldString = managerField.value;
+    const managerCoast = parseFloat (managerFieldString);
+    
+    // get coach coast 
+    const coachField = document.getElementById('coach-field');
+    const coachFieldString = coachField.value ;
+    const coachCoast = parseFloat(coachFieldString); 
+
+    // get player expense 
+    const playersExpense = document.getElementById('total-expense');
+    const playerExpenseString = playersExpense.innerText
+    const previouExpense = parseFloat(playerExpenseString);
+    // playersExpense.innerText = playerExpenseTotal;
+
+
+    const getTotalCoast = previouExpense + managerCoast + coachCoast;
+
+    const totalCoast = document.getElementById('total');
+    totalCoast.innerText = getTotalCoast;
+
+    
 
 });
