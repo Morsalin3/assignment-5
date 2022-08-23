@@ -1,11 +1,12 @@
 
 
-
     document.getElementById('btn-neymer').addEventListener('click', function(){
         const playerSelect = document.getElementById('player-list')
         const createList = document.createElement('li');
         createList.innerText = 'Neymar Jr';
         playerSelect.appendChild(createList);
+
+       
     })
     
     document.getElementById('btn-machado').addEventListener('click', function(){
@@ -42,8 +43,10 @@
         const createList = document.createElement('li');
         createList.innerText = 'Renato Sanches';
         playerSelect.appendChild(createList);
-        
+
+       
     });
+
 
 
 
@@ -62,12 +65,14 @@ document.getElementById('btn-expense').addEventListener('click', function(){
     const playerChildes = playerList.childNodes;
     const players =playerChildes.length-1;
   
-
     // get per player expense 
     const playerExpense = document.getElementById('expense-field');
     const PlayerExpenseString = playerExpense.value ;
     const perPlayerExpense = parseFloat(PlayerExpenseString);
     // playerExpense.value = '';
+
+   
+    
     isNanField(perPlayerExpense);
 
     //  get player total expense 
