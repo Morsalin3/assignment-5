@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Best Five Player</title>
+    <title>World Best Players</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center">
                   <div class= "">
-                      <h1 class=" best-player  ">Select Your Best Five</h1>
+                      <h1 class=" best-player  ">World Best Players</h1>
                       <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi recusandae alias laborum vel, nihil nisi ut. Repellendus officia iste numquam suscipit eveniet nobis, veritatis atque, aliquid minus maiores architecto quidem!
                       </p>
                      
@@ -50,9 +50,9 @@
                       <div class="card" style="width: 18rem;">
                         <img src="images/players/neymar.png" class="card-img-top" alt="...">
                         <div class="card-body text-center bg-dark">
-                          <h5 class="card-title">Lionel Messi</h5>
+                          <h5 class="card-title">Neymar Jr</h5>
                           
-                          <a href="#" class="btn btn-primary px-5">Select</a>
+                          <button id="btn-neymer" class="btn btn-primary px-5">Select</button>
                         </div>
                       </div>
                     </div>
@@ -62,7 +62,7 @@
                         <div class="card-body text-center bg-dark">
                           <h5 class="card-title">Vítor Machado</h5>
                          
-                          <a href="#" class="btn btn-primary px-5">Select</a>
+                          <button id="btn-machado" class="btn btn-primary px-5">Select</button>
                         </div>
                       </div>
                     </div>
@@ -72,7 +72,7 @@
                         <div class="card-body text-center bg-dark">
                           <h5 class="card-title">Lionel Messi</h5>
                          
-                          <a href="#" class="btn btn-primary px-5">Select</a>
+                          <button id="btn-messi" class="btn btn-primary px-5">Select</button>
                         </div>
                       </div>
                     </div>
@@ -82,7 +82,7 @@
                         <div class="card-body text-center bg-dark">
                           <h5 class="card-title">Kylian Mbappé</h5>
                          
-                          <a href="#" class="btn btn-primary px-5">Select</a>
+                          <button id="btn-mbappe" class="btn btn-primary px-5">Select</button>
                         </div>
                       </div>
                     </div>
@@ -92,36 +92,57 @@
                         <div class="card-body text-center bg-dark">
                           <h5 class="card-title">Sergio Ramos</h5>
                           
-                          <a href="#" class="btn btn-primary px-5">Select</a>
+                          <button id="btn-ramos" class="btn btn-primary px-5">Select</button>
                         </div>
                       </div>
                     </div>
                     <div class="col-4">
                       <div class="card" style="width: 18rem;">
-                        <img src="images/players/ramos.png" class="card-img-top" alt="...">
+                        <img src="images/players/santos.png" class="card-img-top" alt="...">
                         <div class="card-body text-center bg-dark">
-                          <h5 class="card-title">Card title</h5>
+                          <h5 class="card-title">Renato Sanches</h5>
                           
-                          <a href="#" class="btn btn-primary px-5">Select</a>
+                          <button id="btn-santos" class="btn btn-primary px-5">Select</button>
                         </div>
                       </div>
                     </div>
                    
                   </div>
                 </div>
-                <!-- ol list here  -->
-                <div class=" col-3">
-                  <div class="card" style="width: 18rem; height: 330px;">
-                    <ul id="player-name">
-
-                    </ul>
+                <!-- player name list  -->
+                <div class=" col-3 text-white">
+                  <div class="card-body">
+                    <div class="card bg-dark text-center" style="width: 18rem; min-height: 330px;">
+                                      <!-- ol list here  -->
+                      <div id="player">
+                        <h3 class="">Selected - V</h1>
+                          <ol id="player-list">
+                            <!-- <li>hello</li> -->
+      
+                          </ol>
+                      </div>
+                   </div>
                   </div>
-                  <div class="card" style="width: 18rem; height: 330px;">
-                    
-                    <ul>
 
-                    </ul>
+                  <div class="card-body">
+                    <div class="card bg-dark text-center mt-3" style="width: 18rem; min-height: 330px;">
+                      <h3 class="mb-2">Bugdet</h1>
+                        <div>
+                          <label>Per Player :</label><input id="expense-field" type="text" class="bg-dark border text-white">
+                          <button id="btn-expense" type="button"  class="btn btn-primary btn-lg my-3">Calculate</button><br>
+                          <p>Player Expense : $<span id="total-expense">0</span></p>
+                          <!-- player expense end here  -->
+                          <label>Manager :</label><input id="manager-field" type="text" class="bg-dark border mb-2 text-white">
+                          <label>Coach :</label><input id="coach-field" type="text" class="bg-dark border text-white text-start">
+                          <button id="btn-total" type="button" class="btn btn-primary btn-lg my-2">Calculate Total</button>
+    
+                          <h6 id="total" class="text-start pd-2">Total : $<span>0</span></h4>
+
+                        </div>
+                      </div>
                   </div>
+
+                  
                 </div>
                 
               </div>
@@ -147,5 +168,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="player.js"></script>
   </body>
 </html>
